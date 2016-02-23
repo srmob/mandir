@@ -49,7 +49,7 @@ module.exports = function(wagner) {
                 status(status.INTERNAL_SERVER_ERROR).
                 json({ error: error.toString() });
             }
-            if (!eventData) {
+            if (!data) {
               return res.
                 status(status.NOT_FOUND).
                 json({ error: 'Not found' });
