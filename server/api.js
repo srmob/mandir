@@ -43,7 +43,7 @@ module.exports = function(wagner) {
 
     api.get('/events', wagner.invoke(function(Event) {
         return function(req, res) {
-          Event.find({}, function(error, eventData) {
+          Event.find({}, function(error, data) {
             if (error) {
               return res.
                 status(status.INTERNAL_SERVER_ERROR).
@@ -54,7 +54,8 @@ module.exports = function(wagner) {
                 status(status.NOT_FOUND).
                 json({ error: 'Not found' });
             }
-            res.json({ event: eventData });
+              console.log('event data is '+data);
+            res.json({ event: data });
           });
         };
   }));

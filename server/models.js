@@ -17,11 +17,11 @@ module.exports = function(wagner) {
         return Purohit;
     });
     
-     var Event =
+    var Event =
         mongoose.model('Event', require('./category'), 'event');
 
     wagner.factory('Event', function() {
-        return Purohit;
+        return Event;
     });
   return {
     Category: Category,

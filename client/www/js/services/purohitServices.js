@@ -1,12 +1,14 @@
 (function(){
-    var funcPurohitsData = function($http,serverAPIEndpoint) {
+    var funcPurohitsData = function($http,serverAPIEndpoint,DBA) {
           var self = this;
 
-          self.getAllPurohits = function(sellerID) {
-            var parameters= [sellerID];
+          self.getAllPurohits = function() {
             return $http.get(serverAPIEndpoint + 'purohit')
               .then(function(result){
-                return result;
+                //return DBA.processResultSethttp(result);
+                //return JSON.parse(result);
+                console.log(result.data.purohit);
+                return result.data.purohit;
               },function(error) {
                     console.log(" getAllPurohits ran into error "+error.message);
                 });
