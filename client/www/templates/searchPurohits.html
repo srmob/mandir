@@ -5,10 +5,13 @@
                 <i class="icon ion-search placeholder-icon"></i>
                 <input type="search" placeholder="search for purohits">
             </label>
-            <ion-item class="item-thumbnail-left" ui-sref="tabsController.purohitName" ng-repeat='person in purohits'>
+            <ion-item class="item-thumbnail-left" ui-sref="tabsController.purohitName({id:value._id})" ng-repeat='(key, value) in purohits' >
+               <!--ng-click='viewPurohitData(value._id)'-->
+                {{value._id}} - {{$index}}
                 <img>
-                <h2>{{person.name}}</h2>
-                <p>{{person.age}}</p>
+                <h2>{{value.name}}</h2>
+                <p>{{value.age}}</p>
+                <p>{{value._id}}</p>
             </ion-item>
             <!--<ion-item class="item-thumbnail-left" ui-sref="tabsController.purohitName">
                 <img>

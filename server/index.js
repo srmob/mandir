@@ -16,4 +16,4 @@ app.use(express.static('src/views'));
 app.use('/api/v1', require('./api')(wagner));
 
 app.listen(3000);
-console.log('Listening on port 3000!');
+console.log('Listening on port 3000..!');

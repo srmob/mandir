@@ -5,38 +5,21 @@ module.exports = function(wagner) {
   var api = express.Router();
 
     
-  api.get('/category/id/:id', wagner.invoke(function(Category) {
+  
+    api.get('/purohits', wagner.invoke(function(purohits) {
     return function(req, res) {
-      Category.findOne({ _id: req.params.id }, function(error, category) {
+      purohits.find({}, function(error, purohits) {
         if (error) {
           return res.
             status(status.INTERNAL_SERVER_ERROR).
             json({ error: error.toString() });
         }
-        if (!category) {
+        if (!purohits) {
           return res.
             status(status.NOT_FOUND).
             json({ error: 'Not found' });
         }
-        res.json({ category: category });
-      });
-    };
-  }));
-    
-    api.get('/purohit', wagner.invoke(function(Purohit) {
-    return function(req, res) {
-      Purohit.find({  }, function(error, purohit) {
-        if (error) {
-          return res.
-            status(status.INTERNAL_SERVER_ERROR).
-            json({ error: error.toString() });
-        }
-        if (!purohit) {
-          return res.
-            status(status.NOT_FOUND).
-            json({ error: 'Not found' });
-        }
-        res.json({ purohit: purohit });
+        res.json({ allPandits: purohits });
       });
     };
   }));
@@ -59,18 +42,18 @@ module.exports = function(wagner) {
           });
         };
   }));
-  api.get('/category/parent/:id', wagner.invoke(function(Category) {
+  api.get('/purohits/id/:id', wagner.invoke(function(purohits) {
     return function(req, res) {
-      Category.
-        find({ parent: req.params.id }).
-        sort({ _id: 1 }).
-        exec(function(error, categories) {
+        console.log('req id'+req.params.id);
+      purohits.findById(req.params.id).
+        exec(function(error, purohit) {
           if (error) {
             return res.
               status(status.INTERNAL_SERVER_ERROR).
               json({ error: error.toString() });
           }
-          res.json({ categories: categories });
+          console.log(' individual data is '+purohit);
+          res.json(purohit);
         });
     };
   }));
