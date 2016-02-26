@@ -5,6 +5,10 @@
     "mongoose" :"4.0.3",
       "http-status": "0.1.8"
   },
+    "engines":{
+        "node": "0.10.x",
+        "npm":"1.4.x"
+    },
   "devDependencies": {
     "mocha": "2.2.4",
     "superagent": "1.2.0"
