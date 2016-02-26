@@ -1,17 +1,24 @@
 <ion-view title="Search Purohits">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <form class="list">
-            <label class="item item-input item-dark">
+            <label class="item item-input">
                 <i class="icon ion-search placeholder-icon"></i>
-                <input type="search" placeholder="search for purohits">
+               <input type="search"
+                  placeholder="Search a purohit..."
+                  ng-model="searchPurohit"
+                  ng-change="scrollTop()">
+                  
             </label>
-            <ion-item class="item-thumbnail-left" ui-sref="tabsController.purohitName({id:value._id})" ng-repeat='(key, value) in purohits' >
+            <ion-item class="item-thumbnail-left" ui-sref="tabsController.purohitName({id:value._id})" ng-repeat='(key, value) in purohits | filter: searchPurohit' >
                <!--ng-click='viewPurohitData(value._id)'-->
-                {{value._id}} - {{$index}}
+                
                 <img>
                 <h2>{{value.name}}</h2>
-                <p>{{value.age}}</p>
-                <p>{{value._id}}</p>
+                <p>{{value.experience}}</p>
+                <div ng-repeat='spl in value.speciality' >
+                     <p>{{spl}}</p>
+                </div>
+                
             </ion-item>
             <!--<ion-item class="item-thumbnail-left" ui-sref="tabsController.purohitName">
                 <img>

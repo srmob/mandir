@@ -21,6 +21,10 @@
             console.log('id being passed is'+id)
              $state.go('tabsController.purohitName',{id:id});
         };
+       $scope.clearSearch = function(){
+           console.log('clear ');
+            $scope.searchPurohit='';
+        };
     };
     
     purohitApp.controller('searchPurohitsCtrl',funcPurohits);
