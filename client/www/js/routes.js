@@ -50,7 +50,7 @@ angular.module('app.routes', ['ionicUIRouter'])
       /page1/tab2/purohit
   */
   .state('tabsController.purohitName', {
-    url: '/purohit',
+    url: '/purohit/:id',
     views: {
       'tab1': {
         templateUrl: 'templates/purohitName.html',

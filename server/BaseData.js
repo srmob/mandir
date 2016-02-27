@@ -18,6 +18,12 @@ db.purohit.insert({
 	"experience" : 28,
 	"speciality" : ["ganesh homa", "Ayush Homa","Gowri Ganesha"]
 });
+db.purohit.insert({
+	"name" : "Gopal Bhat",
+	"age" : 76,
+	"experience" : 40,
+	"speciality" : ["Satyanarayana homa", "Ayush Homa","Gowri Ganesha"]
+});
 
 db.event.insert({
     name: 'Ganesh Chaturthi',
