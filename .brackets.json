@@ -3,6 +3,7 @@
         "/Shashi-data/sriganesh/sriguru/sriguru/mandir/client/www/lib/ionic/js/angular/angular-sanitize.js",
         "/Shashi-data/sriganesh/sriguru/sriguru/mandir/client/www/js/controllers/purohitController.js",
         "/Shashi-data/sriganesh/sriguru/sriguru/mandir/server/api.js",
-        "/Shashi-data/sriganesh/sriguru/sriguru/mandir/client/www/js/services/purohitServices.js"
+        "/Shashi-data/sriganesh/sriguru/sriguru/mandir/client/www/js/services/purohitServices.js",
+        "/Shashi-data/sriganesh/sriguru/sriguru/mandir/client/www/lib/ionic/js/angular-ui/angular-ui-router.min.js"
     ]
 }

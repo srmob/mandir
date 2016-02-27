@@ -17,11 +17,11 @@ module.exports = function(wagner) {
         return allPurohits;
     });
     
-    var Event =
-        mongoose.model('Event', require('./schema/events'), 'event');
+    var allEvents =
+        mongoose.model('events', require('./schema/events'), 'event');
 
-    wagner.factory('Event', function() {
-        return Event;
+    wagner.factory('events', function() {
+        return allEvents;
     });
     
     
@@ -29,6 +29,6 @@ module.exports = function(wagner) {
   return {
    /* Category: Category,*/
     purohits: allPurohits,
-    Event : Event
+    events : allEvents
   };
 };

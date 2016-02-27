@@ -8,7 +8,9 @@
 var purohitApp = angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives'])
 
 
+//.constant('serverAPIEndpoint','https://stark-eyrie-88310.herokuapp.com/api/v1/')
 .constant('serverAPIEndpoint','http://localhost:3000/api/v1/')
+.constant('serverImagePath','http://localhost:3000/images/')
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

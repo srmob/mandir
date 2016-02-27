@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 
 
 var eventBaseSchema = {
-    _id: { type: String },
     name : {type : String},
     date : {type : String},
     duration : {type : String},

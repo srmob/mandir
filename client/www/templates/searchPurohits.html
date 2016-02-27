@@ -12,7 +12,7 @@
             <ion-item class="item-thumbnail-left" ui-sref="tabsController.purohitName({id:value._id})" ng-repeat='(key, value) in purohits | filter: searchPurohit' >
                <!--ng-click='viewPurohitData(value._id)'-->
                 
-                <img>
+                <img ng-src='{{value.imageURL}}'>
                 <h2>{{value.name}}</h2>
                 <p>{{value.experience}}</p>
                 <div ng-repeat='spl in value.speciality' >
