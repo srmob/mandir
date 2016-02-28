@@ -4,8 +4,8 @@
     "wagner-core": "0.1.0",
     "mongoose" :"4.0.3",
       "http-status": "0.1.8"
-  },
-    "engines":{
+<<<<<<< HEAD
+  },"engines":{
         "node": "0.10.x",
         "npm":"1.4.x"
     },
